@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <base href="/">
+    <title>Angular App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"></head>
+  <body>
+  <my-app>loading</my-app>
+  <script src="runtime-es2015.js" type="module"></script><script src="polyfills-es2015.js" type="module"></script><script src="vendor-es2015.js" type="module"></script><script src="main-es2015.js" type="module"></script></body>
+  <script>
+      var csrf_token = "{{ csrf_token() }}";
+      console.log(csrf_token)
+  </script>
+</html>

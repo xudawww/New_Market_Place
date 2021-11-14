@@ -1,0 +1,95 @@
+#cssmenu {
+  display: block;
+  text-align: center;
+  font-family: "Pathway Gothic One", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+#cssmenu > ul {
+}
+#cssmenu ul {
+  max-width: 90vw;
+  display: block;
+  font-size: 0;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  border: transparent;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  position: relative;
+
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+#cssmenu li {
+  position: relative;
+  font-size: 0;
+  margin: 5px;
+  padding: 0;
+  max-width: 300px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/*Top level items
+  ---------------------------------------*/
+
+#cssmenu > ul > li > span,
+#cssmenu > ul > li > div {
+  font-size: 15px;
+  text-decoration: none;
+  padding: 20px 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#cssmenu > ul > li > div:hover {
+  /* color: var(--color) !important;
+  background: var(--background) !important; */
+}
+.bugerContainer {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+[hidden] {
+  display: none !important;
+}
+.menuDisplayBlock {
+  display: inline-block;
+}
+.fishNormalMenu {
+  position: relative;
+  width: 100%;
+}

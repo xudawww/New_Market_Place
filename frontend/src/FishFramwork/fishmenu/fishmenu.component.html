@@ -1,0 +1,18 @@
+<!-- <div #menu [innerHTML]="theHtmlMenuSanitizer"></div> -->
+<div #menu id="cssmenu" [style.visibility]="'ifLoaded'">
+    <div [hidden]="ifBurgerButton" #bugerMenu  [ngClass]="!ifBurger ? 'change' : ''" class="BugerContainer" (click)="toggleBuguerMenu($event)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+       
+    </div>
+    
+    <ul [hidden]="ifBurger" class='fishNormalMenu' >
+        <li *ngFor="let menuItem of menuItems"  >
+            <div *ngIf ="!menuItem.ifMenu"  class='menuItem' [style]="style" routerLink='{{menuItem.path}}'>{{menuItem.title}}</div>
+        </li>
+        <ng-content select='fmnbtns'></ng-content>    
+    </ul>
+    
+</div>     
+<router-outlet></router-outlet>
