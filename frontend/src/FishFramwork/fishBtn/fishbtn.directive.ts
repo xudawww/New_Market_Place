@@ -30,7 +30,7 @@ export class FishbtnDirective {
       el.nativeElement.style.borderRadius='5px';
       el.nativeElement.style.border='none';
       el.nativeElement.style.cursor='pointer';
-      el.nativeElement.style.fontSize='26px';
+      el.nativeElement.style.fontSize='15px';
       el.nativeElement.style.filter='brightness(1)';
       el.nativeElement.style.marginRight='10px';
       const disabled = el.nativeElement.getAttribute('disabled');

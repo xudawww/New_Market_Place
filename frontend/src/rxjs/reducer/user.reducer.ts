@@ -6,7 +6,10 @@ export const intialState = initializeState();
 
 const reducer = createReducer(
   intialState,
-  on(UserActions.GetUserAction, (state) => state),
+  on(UserActions.CreateUserAction, (state) => {
+    console.log('here1111112')
+    return state;
+  }),
 
   on(UserActions.SetUserAction, (state: UserState, { payload }) => {
     return { ...state, User: payload };

@@ -1,10 +1,36 @@
+
 <fmmodal title='Login/Signup'>
     <fmcontent>
-        <finput type='text' title='email'></finput>
-        <finput type='password' title='password'></finput>
+        <mat-tab-group (selectedTabChange)="tabChanged($event)">
+            <mat-tab id='login' label="登录" ></mat-tab>
+            <mat-tab id='signup' label="注册"> </mat-tab>
+        
+          </mat-tab-group>
+        <br>
+        <form [formGroup]="form"  (ngSubmit)="onSubmit()">
+            <mat-form-field color='primary'   appearance="legacy" class='fishFormField' [style.fontSize.px]=15>
+                <mat-label>邮箱</mat-label>
+                <input  type='text' matInput  formControlName="email"/>
+            </mat-form-field>
+            <mat-form-field color='primary' appearance="legacy" class='fishFormField' [style.fontSize.px]=15>
+                <mat-label>密码</mat-label>
+                <input  type='text' matInput formControlName="pass" />
+            </mat-form-field>
+            <mat-form-field  *ngIf="!iflogin" color='primary' appearance="legacy" class='fishFormField' [style.fontSize.px]=15>
+                <mat-label>用户名</mat-label>
+                <input  type='text' matInput formControlName="username"/>
+            </mat-form-field>
+            <mat-form-field  *ngIf="!iflogin"  color='primary' appearance="legacy" class='fishFormField' [style.fontSize.px]=15>
+                <mat-label>昵称</mat-label>
+                <input  type='text' matInput formControlName="nickname"/>
+            </mat-form-field>
+            <mat-form-field  *ngIf="!iflogin"  color='primary' appearance="legacy" class='fishFormField' [style.fontSize.px]=15>
+                <mat-label>确认密码</mat-label>
+                <input  type='text' matInput formControlName="compass"/>
+            </mat-form-field>
+
+            <button type='submit' primary fbtn flat (click)='onSubmit()'>提交</button>
+        </form>
     </fmcontent>
-    <fmaction>
-        <button fbtn flat primary>登录</button>
-        <button fbtn>注册</button>
-    </fmaction>
+
 </fmmodal>
